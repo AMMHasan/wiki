@@ -20,10 +20,15 @@ BamUtil is built using libStatGen. Running bin/bam with no parameters will print
 
 **Tools to Rewrite SAM/BAM Files:**
 convert - Convert SAM/BAM to SAM/BAM (optionally converts between '=' & bases in the sequence
+
 writeRegion - Write a file with reads in the specified region and/or have the specified read name
+
 splitChromosome - Split BAM into 1 file per Chromosome
+
 splitBam - Split BAM into 1 file per Read Group
+
 findCigars - Output just the reads that contain any of the specified CIGAR operations.
+
 BAM Recovery - Recover corrupted BAM files
 **Tools to Modify & write SAM/BAM Files:**
 clipOverlap - Clip overlapping read pairs in a SAM/BAM File already sorted by Coordinate or ReadName so they do not overlap
