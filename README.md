@@ -19,6 +19,7 @@ The software reads the beginning of an input file to determine if it is SAM/BAM.
 BamUtil is built using libStatGen. Running bin/bam with no parameters will print the usage information for the bam executable. Running bin/bam subProgram will print the usage information for the BamUtil sub-program.
 
 **Tools to Rewrite SAM/BAM Files:**
+
 convert - Convert SAM/BAM to SAM/BAM (optionally converts between '=' & bases in the sequence
 
 writeRegion - Write a file with reads in the specified region and/or have the specified read name
@@ -30,28 +31,53 @@ splitBam - Split BAM into 1 file per Read Group
 findCigars - Output just the reads that contain any of the specified CIGAR operations.
 
 BAM Recovery - Recover corrupted BAM files
+
 **Tools to Modify & write SAM/BAM Files:**
+
 clipOverlap - Clip overlapping read pairs in a SAM/BAM File already sorted by Coordinate or ReadName so they do not overlap
+
 filter - Filter reads by soft clipping ends with too high of a mismatch percentage and by marking reads unmapped if the quality of mismatches is too high
+
 revert - Revert SAM/BAM replacing the specified fields with their previous values (if known) and removes specified tags
+
 squeeze - Reduce file size by dropping OQ fields, duplicates, & specified tags, using '=' when a base matches the reference, binning quality scores, and replacing readNames with unique integers
+
 trimBam - Trim the ends of reads in a SAM/BAM file changing read ends to 'N' and quality to '!' or by doing soft clips
+
 mergeBam - Merge multiple BAMs and headers appending ReadGroupIDs if necessary
+
 polishBam - Add/update header lines & add the RG tag to each record
+
 dedup - Mark or remove duplicates, can also perform recalibration
+
 recab - Recalibrate base qualities
+
 **Informational Tools:**
+
 validate - Validate a SAM/BAM File, checking file format & printing statistics
+
 diff - Diff 2 coordinate sorted SAM/BAM files.
+
 stats - Generate some basic statistics for a SAM/BAM file
+
 gapInfo - Print information on the gap between read pairs in a SAM/BAM File.
+
 **Helper Tools to Print Information In Readable Format:**
+
 dumpHeader - Print the SAM/BAM Header to the screen
+
 dumpRefInfo - Print SAM/BAM Reference Name Information from the header
+
 dumpIndex - Print BAM Index File to the screen in a readable format
+
 readReference - Print the reference string for the specified region to the screen
+
 explainFlags - Describe SAM/BAM flags
+
 **Additional Tools:**
+
 bam2FastQ - Convert the specified BAM file to fastQs.
+
 **Dummy/Example Tools:**
+
 readIndexedBam - Read an indexed BAM file reference by reference id -1 to the max reference id and write it out as a SAM/BAM file
