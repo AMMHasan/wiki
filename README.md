@@ -91,3 +91,11 @@ N.B. It was still reported as clustered_event by GATK3 MuTect2 against PON (with
   
 ##############################################################################################################################
   
+  For online video on Survival analysis:
+  https://www.youtube.com/watch?v=vX3l36ptrTU&list=PLqzoL9-eJTNDdnKvep_YHIwk2AMqHhuJ0&index=1
+  For plotting:
+  R package "survminer"
+  Short tutorials (mostly on Kaplan Meier survival plots):
+  https://rpkgs.datanovia.com/survminer/
+  https://dk81.github.io/dkmathstats_site/rvisual-kaplan-meier.html
+  
