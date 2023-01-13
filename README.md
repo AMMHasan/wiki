@@ -90,8 +90,8 @@ N.B. It was still reported as clustered_event by GATK3 MuTect2 against PON (with
   readIndexedBam - Read an indexed BAM file reference by reference id -1 to the max reference id and write it out as a SAM/BAM file
   
 ##############################################################################################################################
-  
-  For online video on Survival analysis:
+
+5. For online video on Survival analysis:
   https://www.youtube.com/watch?v=vX3l36ptrTU&list=PLqzoL9-eJTNDdnKvep_YHIwk2AMqHhuJ0&index=1
   For plotting:
   R package "survminer"
@@ -99,3 +99,21 @@ N.B. It was still reported as clustered_event by GATK3 MuTect2 against PON (with
   https://rpkgs.datanovia.com/survminer/
   https://dk81.github.io/dkmathstats_site/rvisual-kaplan-meier.html
   
+################################################################################################################################
+
+6. Running Clonet.v3 using singularity created by Osvaldas from his github repo TearsWillFall/ULPwgs -
+
+It's better to use screen and qrsh for local implementation rather than batch (needs a trial) mode.
+
+Open a screen session and then open a 24hrs qrsh session with 8 threads and 10GB rams.
+Go to the Scratch folder and load r/recommended module:
+    module -f unload compilers mpi gcc-libs
+    module load r/recommended
+Start R and install ULPwgs package from github using devtools (for once):
+    install.packages('devtools') 
+    devtools::install_github(“TearsWillFall/ULPwgs”) 
+Load the ULPwgs package in the R session:
+    library(ULPwgs) 
+Invoke clonet_trento() function and use relative paths (from Scratch directory) for the tumour, normal, output_dir, temp_dir etc.
+
+
